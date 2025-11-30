@@ -1,0 +1,232 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(../fonts/Gilroy-ExtraBold-Rupee.woff2);
+}
+
+@font-face {
+    font-family: GilroyLight;
+    src: url(../fonts/Gilroy-Light.ttf);
+}
+
+@font-face {
+    font-family: GilroyRegular;
+    src: url(../fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: DongporaDemo;
+    src: url(../fonts/DongporaDemo-nAxJY.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body {
+    width:100%;
+    height:100%;
+}
+body {
+    width: 100%;
+    /* height: auto; */
+    overflow-x: hidden ;
+}
+
+.page1{
+    background: url(../asset/pattern-bg.png);
+    width: 100%;
+    
+}
+.terms{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.blank{
+    width: 100%;
+    height: 100vh;
+    background: url(../asset/pattern-bg.png);
+}
+.terms h4{
+    line-height: 40px;
+    margin-bottom: 50%;
+}
+.menu {
+    width: 100vw;
+    height: 10vh;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    background-color: #fff;
+}
+
+.menu img {
+    height: 5.5em;
+    margin-left: 20%;
+}
+
+.menu svg {
+    margin-right: 20em;
+    cursor: pointer;
+}
+
+.svg-line {
+    position: absolute;
+    top: -30px;
+    left: 84%;
+}
+
+.menu a {
+    position: absolute;
+    top: 20px;
+    left: 85%;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+    /* font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+}
+
+.hamburger-icon {
+    overflow: visible;
+}
+
+.hamburger-icon rect {
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger-icon:hover .rect1 {
+    transform: translateX(-55px);
+    width: 100px;
+}
+
+.hamburger-icon:hover .rect2 {
+    transform: translateX(35px);
+    width: 45px;
+}
+
+.navigation {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: crimson; */
+    display: none;
+    transform: translateY(-955px);
+    background-color: #fff ;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    width: 75%;
+    height: 80%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 13%;
+}
+
+.home-container,
+.product-container,
+.About-container,
+.Feedback-container {
+    /* overflow: visible; */
+    width: 100%;
+    height: 160px;
+    /* background-color: aqua; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.home-container a,
+.product-container a,
+.About-container a,
+.Feedback-container a {
+    font-family: DongporaDemo;
+    font-size: 5.5em;
+    font-weight: 200;
+    z-index: 20;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 100%;
+}
+
+.home-container a i,
+.product-container a i,
+.About-container a i,
+.Feedback-container a i {
+    font-size: 35px;
+    font-weight: 1000;
+    z-index: 2;
+}
+
+.home-container button {
+    position: relative;
+    font-size: 1em;
+    padding: 20px;
+    /* margin-bottom: 45px; */
+    margin-right: 20px;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    z-index: 3;
+    background-color: #fff;
+}
+
+.home-container::before,
+.product-container::before,
+.About-container::before,
+.Feedback-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+.home-container:hover::before,
+.product-container:hover::before,
+.About-container:hover::before,
+.Feedback-container:hover::before {
+    transform: scaleX(1);
+}
+
+.line1,
+.line2 {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 99%;
+}
+h4{
+    width: 80%;
+    
+}
+.menu1{
+    background-color: #fff !important;
+}

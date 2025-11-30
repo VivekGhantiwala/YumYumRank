@@ -1,0 +1,412 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(../fonts/Gilroy-ExtraBold-Rupee.woff2);
+}
+
+@font-face {
+    font-family: GilroyLight;
+    src: url(../fonts/Gilroy-Light.ttf);
+}
+
+@font-face {
+    font-family: DongporaDemo;
+    src: url(../fonts/DongporaDemo-nAxJY.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(-45deg, rgb(255, 255, 224), rgb(255, 240, 153));
+    font-family: Gilroy;
+    background-size: 500% 500%;
+    animation: gradiant 7s ease infinite; /* Adjusted for testing */
+}
+
+@keyframes gradiant {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+
+.container1 {
+    width: 1000px;
+    max-width: 1000px;
+    height: 70vh;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 200px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar {
+    padding: 20px;
+    border-right: 1px solid rgb(225, 225, 200);
+    height: 100%;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: rgb(100, 100, 80);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-family: GilroyLight !important;
+}
+
+.sidebar a:hover {
+    background-color: rgb(205, 205, 180);
+    color: rgb(60, 60, 40);
+}
+
+.main-content {
+    padding: 30px;
+    overflow-y: auto;
+    flex-grow: 1;
+    background: url(../asset/rounds.png) !important;
+}
+
+h2 {
+    margin-top: 0;
+    color: rgb(100, 100, 80);
+    border-bottom: 2px solid rgb(205, 205, 180);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: Gilroy !important;
+}
+
+.user-info {
+    margin-bottom: 20px;
+    background-color: rgb(250, 250, 235);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: rgb(80, 80, 60);
+    font-family: Gilroy !important;
+}
+
+.user-info strong {
+    color: rgb(100, 100, 80);
+    font-family: Gilroy !important;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgb(205, 205, 180);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .profile {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        flex-grow: 1;
+    }
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding-top: 100px; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: auto;  
+    max-width: 400px;  
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+}
+.sidebar {
+    width: 220px; 
+    background: #f5f5f5; 
+    padding: 15px;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #333; 
+    margin: 15px 0;
+    font-family: Gilroy !important;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-family: Gilroy !important;
+}
+
+.sidebar a:hover {
+    background: #d0e6f5; 
+    color: #0056b3;
+}
+
+.main-content h2 {
+    font-size: 1.8em; 
+    color: #555; 
+    margin-bottom: 10px;
+    font-family: Gilroy !important;
+}
+
+
+.favorite-item h3 {
+    font-size: 1.3em;
+    color: #333; 
+    margin: 10px 0; 
+    font-family: Gilroy !important;
+}
+
+
+body {
+    font-family: 'Gilroy', sans-serif; /* Use Gilroy as the default font */
+    background-color: rgb(245, 245, 220) !important; /* Light grey background for a modern look */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px; /* Added margin to separate from the header */
+}
+
+.container1 {
+    width: 90%; /* Increased width for better content layout */
+    max-width: 1200px; /* Max width for larger screens */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.profile {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px; /* Increased sidebar width */
+    background: #e9ecef; /* Lighter grey for the sidebar */
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0 0 10px; /* Rounded corners */
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold; /* Increased font weight for better visibility */
+}
+
+.sidebar a:hover {
+    background: #ced4da; /* Darker hover color */
+}
+
+.main-content {
+    padding: 30px; /* Increased padding for main content */
+    flex-grow: 1;
+    background: #fff; /* White background for main content */
+    border-radius: 0 10px 10px 0; /* Rounded corners to match sidebar */
+}
+
+.user-info {
+    margin-bottom: 30px; /* More space between sections */
+}
+
+.profile-image {
+    width: 120px; /* Larger profile image */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #007bff; /* Blue border for profile image */
+}
+
+#favoritesContent {
+    margin-top: 20px;
+}
+
+#favoritesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.favorite-item {
+    background: #f8f9fa; /* Light background for favorite items */
+    border: 1px solid #dee2e6; /* Border color matching the light theme */
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    overflow: hidden; /* Prevent overflow */
+    position: relative; /* For absolute positioning of elements inside */
+}
+
+.favorite-item:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.favorite-item img {
+    width: 100%;
+    border-radius: 5px;
+    height: 150px; /* Increased height for better visibility */
+    object-fit: cover;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.favorite-item h3 {
+    font-size: 1.3em; /* Increased font size */
+    margin: 10px 0;
+    font-weight: bold; /* Increased font weight */
+    color: #007bff; /* Blue color for item name */
+}
+
+.remove-favorite {
+    background: #dc3545; /* Red color for remove button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px; /* More padding for the button */
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold; /* Increased font weight */
+}
+
+.remove-favorite:hover {
+    background: #ff4757; /* Darker red on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    padding-top: 100px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; /* Max width for modal */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-button {
+    background-color: #dc3545; /* Red color for modal buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold; /* Increased font weight */
+    transition: background 0.3s;
+}
+
+.modal-button:hover {
+    background-color: #ff4757; /* Darker red on hover */
+}
+
+@media (max-width: 768px) {
+    .favorite-item {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar full width on mobile */
+        border-radius: 0; /* No rounded corners */
+    }
+
+    .profile {
+        flex-direction: column; /* Stack sidebar and main content */
+    }
+}
+
+@media (max-width: 480px) {
+    .favorite-item {
+        width: 100%; /* Full width on very small screens */
+    }
+}

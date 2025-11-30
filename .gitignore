@@ -1,0 +1,83 @@
+# PHP specific
+*.log
+*.cache
+*.tmp
+
+# Environment files
+.env
+.env.local
+.env.*.local
+config.local.php
+
+# IDE/Editor folders
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Dependency directories
+node_modules/
+vendor/
+bower_components/
+
+# Build directories
+dist/
+build/
+
+# Upload directories (keep structure but ignore contents)
+Login/uploads/profile_pictures/*
+!Login/uploads/profile_pictures/.gitkeep
+client/uploads/*
+!client/uploads/.gitkeep
+
+# Temporary files
+*.bak
+*.backup
+*.old
+
+# Compressed files (except documentation)
+*.zip
+*.rar
+*.7z
+*.tar.gz
+!Login/New WinRAR ZIP archive.zip
+
+# Database dumps (sensitive data)
+*.sql.bak
+database_backup*.sql
+
+# Session files
+sess_*
+
+# Error logs
+error_log
+php_errors.log
+
+# Cache files
+*.cache
+cache/
+
+# Composer
+composer.lock
+
+# PHPUnit
+.phpunit.result.cache
+phpunit.xml
+
+# Documentation build
+docs/_build/

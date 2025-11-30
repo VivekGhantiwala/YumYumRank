@@ -1,0 +1,23 @@
+home page (reviews)
+aboutUs(external file)
+header file(external file)
+footer
+food page
+alternative
+price page
+
+table
+
+Users*
+Foods*
+Ingredients*
+Food_Ingredients* (junction table)
+Categories*
+Ratings(opp)
+Reviews*
+Alternatives*
+Nutritional_Info*
+Admin_Users*
+
+--------
+comparison

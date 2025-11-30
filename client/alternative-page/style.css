@@ -1,0 +1,637 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(../fonts/Gilroy-ExtraBold-Rupee.woff2);
+}
+
+@font-face {
+    font-family: GilroyLight;
+    src: url(../fonts/Gilroy-Light.ttf);
+}
+
+@font-face {
+    font-family: GilroyRegular;
+    src: url(../fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: DongporaDemo;
+    src: url(../fonts/DongporaDemo-nAxJY.otf);
+}
+.review-panel {
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+.review-panel::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    
+    /* overflow-x: hidden; */
+}
+/* Toast container */
+
+
+
+.main {
+    /* background-color: beige; */
+    overflow-x: hidden;
+    /* margin-top: -22%; */
+    position: relative;
+}
+
+.page1,
+.page2,.page3{
+    width: 100vw;
+    height: 100vh;
+}
+.page1{
+    background: url(../asset/pattern-bg.png);
+}
+.page2{
+    z-index: 2;
+    position: relative;
+    height: none;
+}
+.page3{
+    margin-top: 140% !important;
+    position: relative;
+}
+/* .page3{
+    background: url(../asset/pattern-bg.png);
+    position: absolute;
+    bottom: 0;
+} */
+.Popup{
+    height: 16%;
+    margin-top: 40%;
+}
+
+/* .about-us{
+    margin-top: 25%;
+} */
+.menu{
+background-color: white !important;
+}
+.heading {
+
+    font-size: 26px;
+    font-weight: 800;
+    color: #333;
+    font-family: Gilroy;
+}
+
+.scroll-buttons button {
+    background-color: rgb(217, 217, 217);
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.scroll-buttons button:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+section {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    white-space: none;
+    z-index: -1;
+    position: relative;
+}
+
+.move2 {
+    height: 35vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-bottom: 1px solid #9494944d;
+    z-index: 1;
+}
+.move3{
+    height: 40vh;
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    /* overflow-x: auto; */
+    /* overflow-y: hidden; */
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-bottom: 1px solid #9494944d;
+    z-index: 1;
+}
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.move1 {
+    background-color: greenyellow;
+
+}
+
+.move2 {
+    min-height: 45%;
+    /* margin-bottom: 20%; */
+}
+
+.move1::-webkit-scrollbar,
+.move2::-webkit-scrollbar {
+    display: none;
+}
+
+.recently-added {
+    width: 75vw;
+    height: 80vh;
+    margin-top: 25px;
+    overflow: hidden;
+    border-bottom: 1px solid #9494944d;
+}
+
+.alternative {
+    margin: 0;
+    position: absolute;
+    top: 45%
+}
+
+/* .recently-added .header-section,
+.alternative .header-section {
+    width: 100%;
+    gap: 77em;
+    margin: 0px 0 30px 0;
+
+} */
+
+.header-section h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #333;
+    font-family: Gilroy;
+}
+.btn a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    color: #fff;
+    font-family: GilroyReg !important;
+    
+}
+.Popup{
+    z-index: 1000000;
+}
+.recently-product {
+    width: 100%;
+    height: 80%;
+    transition: transform 0.3s ease;
+    /* cursor: pointer; */
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+}
+.recently-image-container {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(235, 235, 235);
+    /* place-self: 1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.recently-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* background-size: cover  ; */
+}
+
+.product-data {
+    width: 60%;
+    height: 100%;
+    padding: 5px 0 0 30px;
+    /* padding: 10px 0 10px 0; */
+    /* background-color: firebrick; */
+    /* place-self: 2; */
+}
+
+.product-data h1 {
+    margin: 0;
+    font-family: GilroyRegular !important;
+
+}
+
+.product-data h3 {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    font-family: GilroyRegular !important;
+
+
+}
+
+.product-data .price {
+    padding: 15px;
+    background-color: rgb(245, 245, 245);
+    margin: 0 0 20px 0;
+}
+
+.product-data p {
+    font-size: 13px;
+    font-family: GilroyRegular !important;
+
+
+}
+
+.product-data h5 {
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    font-family: GilroyRegular !important;
+
+}
+
+.product-bottom {
+    width: 100%;
+    height: 40%;
+    background-color: rgb(235, 235, 235);
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    /* gap: 50px; */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border-bottom: 1px solid #9494944d; */
+}
+
+.Product-details,
+.Nutritional-information,
+.Health-impact,
+.Health-score {
+    width: 400px;
+    height: 100%;
+}
+
+.Product-details h4,
+.Nutritional-information h4,
+.Health-impact h4,
+.Health-score h4 {
+    font-family: Gilroy !important;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    font-size: 30px;
+}
+
+.Product-details h6,
+.Nutritional-information h6,
+.Health-impact h6,
+.Health-score h6 {
+    font-family: GilroyRegular !important;
+    font-size: 20px;
+}
+
+.Product-details h6 span,
+.Nutritional-information h6 span,
+.Health-impact h6 span,
+.Health-score h6 span {
+    font-family: Gilroy !important;
+}
+
+.Health-score .score {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    /* background-color: rgb(220, 252, 231); */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 0 10px;
+}
+
+.score h1 {
+    margin: 0;
+    font-family: Gilroy !important;
+}
+
+.score p {
+    margin: 0;
+    font-family: Gilroy !important;
+}
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    white-space: none;
+
+}
+.alternative{
+    width: 100%;
+}
+
+.top-added {
+    width: 80%;
+    height: 80%;
+    /* background-color: crimson; */
+    border-bottom: 1px solid #9494944d;
+    margin-top: 25px;
+    position: relative;
+}
+
+.top-added svg {
+    position: absolute;
+    right: -70px;
+    top: 0;
+
+}
+
+.top-added svg path {
+    transform: scale(0.8);
+    color: #f5f5dc;
+}
+
+.top-added svg text {
+    font-family: Gilroy;
+}
+
+.top-added .header-section {
+    width: 100%;
+    gap: 77em;
+}
+
+.top-product {
+    min-width: 283px;
+    width: 250px;
+    max-height: 230px;
+    min-height: 350px;
+    /* background-color: crimson; */
+    /* overflow: visible; */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.top-product a {
+    text-decoration: none;
+    color: rgb(25, 28, 33);
+}
+
+.top-product:hover {
+    transform: scale(0.9);
+}
+
+.top-image-container {
+    border-radius: 18px;
+    width: 100%;
+    min-height: 20%;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.top-image-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.89), transparent);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    pointer-events: none;
+}
+
+.top-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    position: relative;
+    z-index: -20;
+}
+
+.top-added h1 {
+    font-size: 18px;
+    padding: 10px;
+    font-family: Gilroy;
+}
+
+.top-added p {
+    font-size: 16px;
+    padding: 0 10px;
+    color: rgb(104, 107, 110);
+    font-weight: 900;
+    font-family: GilroyLight;
+}
+
+
+.reviews {
+    width: 100%;
+    height: 57%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../asset/rounds.png);
+    background-color: rgb(252, 246, 237);
+    margin-top: 20px;
+}
+
+.latest-review-header {
+    height: 10%;
+    width:  100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftHeading h2 {
+    font-size: 40px;
+    font-family: GilroyLight;
+    font-weight: 900;
+    position: absolute;
+    right: -30%;
+}
+
+.review-panel,
+.review-panel2 {
+    /* min-width: none;; */
+    min-width: calc(var(--width) * var(--quantity));
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+
+}
+
+.review-panel::-webkit-scrollbar,
+.review-panel2::-webkit-scrollbar {
+    display: none;
+}
+
+.user-review {
+    min-width: var(--width);
+    width: var(--width);
+    height: var(--height);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* position: relative; */
+    position: absolute;
+    left: 100%;
+    animation: autoRun 25s linear infinite;
+    animation-delay: calc((25s / var(--quantity)) * (var(--position)));
+}
+
+.user-review2 {
+    min-width: var(--width);
+    width: var(--width);
+    height: var(--height);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* position: relative; */
+    position: absolute;
+    right: 100%;
+    animation: autoRun2 25s linear infinite;
+    animation-delay: calc((25s / var(--quantity)) * (var(--position)));
+}
+
+@keyframes autoRun2 {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: calc(var(--width) * -1);
+    }
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.review-panel:hover .user-review {
+    animation-play-state: paused !important;
+    filter: blur(5px);
+}
+
+.review-panel .user-review:hover {
+    filter: blur(0);
+}
+
+.review-panel2:hover .user-review2 {
+    animation-play-state: paused !important;
+    filter: blur(5px);
+}
+
+.review-panel2 .user-review2:hover {
+    filter: blur(0);
+}
+
+.user-review p {
+    font-family: GilroyLight !important;
+    font-weight: 700;
+}
+
+.star {
+    width: 100%;
+    height: 30px;
+    /* background-color: red; */
+    
+}
+.ratingstar{
+    font-size: 40px;
+}
+.rightHeading,.leftHeading{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+    height: 100%;
+}
+.leftHeading{
+    position: relative;
+
+}
+.star i {
+    color: rgb(255, 153, 36);
+}
+
+
+.profileContainer {
+    display: inline-flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-right: 10px;
+}
+
+.profileContainer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedbackusername {
+    margin-left: 20px;
+}
+.feedbackname{
+    margin-left: 20px;
+    font-family: Gilroy;
+}
+.latestText {
+    margin: 20px 0;
+}
