@@ -84,7 +84,7 @@ Replace `VivekGhantiwala` with your GitHub username:
 
 ```bash
 git branch -M main
-git remote add origin https://github.com/VivekGhantiwala/yum-yum-rank.git
+git remote add origin https://github.com/VivekGhantiwala/YumYumRank.git
 ```
 
 ### Step 7: Push to GitHub
